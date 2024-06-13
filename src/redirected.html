@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+        #back-button {
+            font-size: x-large;
+            position: fixed;
+            top: 70px;
+            right: 100px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const project = urlParams.get('project');
+
+            const projectDetails = {
+                1: {
+                    title: "Project 1",
+                    description: "Detailed description of Project 1."
+                },
+                2: {
+                    title: "Project 2",
+                    description: "Detailed description of Project 2."
+                    
+                },
+                3: {
+                    title: "Project 3",
+                    description: "Detailed description of Project 3."
+                },
+                4: {
+                    title: "Project 4",
+                    description: "Detailed description of Project 4."
+                },
+                5: {
+                    title: "Project 5",
+                    description: "Detailed description of Project 5."
+                },
+                "all": {
+                    title: "All Projects",
+                    description: "Detailed description of Projects."
+                }
+            };
+
+            const projectDetail = projectDetails[project];
+
+            if (projectDetail) {
+                document.getElementById("project-title").innerText = projectDetail.title;
+                document.getElementById("project-description").innerText = projectDetail.description;
+            } else {
+                document.getElementById("project-title").innerText = "Project not found";
+                document.getElementById("project-description").innerText = "";
+            }
+        });
+    </script>
+</head>
+<body>
+    <button id="back-button" onclick="goBack()">Back</button>
+    <h1 id="project-title"></h1>
+    <p id="project-description"></p>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

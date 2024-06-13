@@ -1,0 +1,1775 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { clifford: "#da373d" } } } }</script>
+    <title>Kotresh TV</title>
+    <script defer="defer" src="/static/js/main.7e8ef528.js"></script>
+    <link href="/static/css/main.176b99b4.css" rel="stylesheet">
+    <style>
+        /* ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+
+        ::after,
+        ::before {
+            --tw-content: ''
+        }
+
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+
+        :-moz-focusring {
+            outline: auto
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+
+        legend {
+            padding: 0
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        dialog {
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        [role=button],
+        button {
+            cursor: pointer
+        }
+
+        :disabled {
+            cursor: default
+        }
+
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        [hidden] {
+            display: none
+        }
+
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        .fixed {
+            position: fixed
+        }
+
+        .top-0 {
+            top: 0px
+        }
+
+        .z-0 {
+            z-index: 0
+        }
+
+        .z-50 {
+            z-index: 50
+        }
+
+        .mx-2 {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .my-6 {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem
+        }
+
+        .my-8 {
+            margin-top: 2rem;
+            margin-bottom: 2rem
+        }
+
+        .-mr-1 {
+            margin-right: -0.25rem
+        }
+
+        .mb-12 {
+            margin-bottom: 3rem
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .ml-2 {
+            margin-left: 0.5rem
+        }
+
+        .ml-4 {
+            margin-left: 1rem
+        }
+
+        .ml-6 {
+            margin-left: 1.5rem
+        }
+
+        .mr-4 {
+            margin-right: 1rem
+        }
+
+        .mr-5 {
+            margin-right: 1.25rem
+        }
+
+        .mr-6 {
+            margin-right: 1.5rem
+        }
+
+        .mt-12 {
+            margin-top: 3rem
+        }
+
+        .mt-16 {
+            margin-top: 4rem
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem
+        }
+
+        .mt-3 {
+            margin-top: 0.75rem
+        }
+
+        .mt-4 {
+            margin-top: 1rem
+        }
+
+        .mt-5 {
+            margin-top: 1.25rem
+        }
+
+        .mt-6 {
+            margin-top: 1.5rem
+        }
+
+        .mt-8 {
+            margin-top: 2rem
+        }
+
+        .block {
+            display: block
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .h-screen {
+            height: 100vh
+        }
+
+        .h-28 {
+            height: 7rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .w-1\/2 {
+            width: 50%
+        }
+
+        .w-12 {
+            width: 3rem
+        }
+
+        .w-32 {
+            width: 8rem
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .w-40 {
+            width: 10rem
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .max-w-7xl {
+            max-width: 80rem
+        }
+
+        .max-w-xl {
+            max-width: 36rem
+        }
+
+        .cursor-pointer {
+            cursor: pointer
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .items-stretch {
+            align-items: stretch
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .whitespace-nowrap {
+            white-space: nowrap
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem
+        }
+
+        .rounded-t-lg {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-gray-200 {
+            --tw-border-opacity: 1;
+            border-color: rgb(229 231 235 / var(--tw-border-opacity))
+        }
+
+        .border-gray-300 {
+            --tw-border-opacity: 1;
+            border-color: rgb(209 213 219 / var(--tw-border-opacity))
+        }
+
+        .border-transparent {
+            border-color: transparent
+        }
+
+        .bg-blue-500 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(59 130 246 / var(--tw-bg-opacity))
+        }
+
+        .bg-blue-700 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(29 78 216 / var(--tw-bg-opacity))
+        }
+
+        .bg-gray-100 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+        }
+
+        .bg-gray-50 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(249 250 251 / var(--tw-bg-opacity))
+        }
+
+        .bg-indigo-500 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(99 102 241 / var(--tw-bg-opacity))
+        }
+
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+        }
+
+        .bg-fixed {
+            background-attachment: fixed
+        }
+
+        .p-2\.5 {
+            padding: 0.625rem
+        }
+
+        .p-4 {
+            padding: 1rem
+        }
+
+        .p-5 {
+            padding: 1.25rem
+        }
+
+        .px-1 {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem
+        }
+
+        .px-2 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem
+        }
+
+        .px-3 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem
+        }
+
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem
+        }
+
+        .pb-12 {
+            padding-bottom: 3rem
+        }
+
+        .pb-20 {
+            padding-bottom: 5rem
+        }
+
+        .pb-24 {
+            padding-bottom: 6rem
+        }
+
+        .pl-2 {
+            padding-left: 0.5rem
+        }
+
+        .pt-20 {
+            padding-top: 5rem
+        }
+
+        .pt-24 {
+            padding-top: 6rem
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .text-justify {
+            text-align: justify
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem
+        }
+
+        .text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem
+        }
+
+        .text-5xl {
+            font-size: 3rem;
+            line-height: 1
+        }
+
+        .text-base {
+            font-size: 1rem;
+            line-height: 1.5rem
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .font-extrabold {
+            font-weight: 800
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-normal {
+            font-weight: 400
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .tracking-tight {
+            letter-spacing: -0.025em
+        }
+
+        .text-black {
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity))
+        }
+
+        .text-blue-500 {
+            --tw-text-opacity: 1;
+            color: rgb(59 130 246 / var(--tw-text-opacity))
+        }
+
+        .text-blue-600 {
+            --tw-text-opacity: 1;
+            color: rgb(37 99 235 / var(--tw-text-opacity))
+        }
+
+        .text-blue-700 {
+            --tw-text-opacity: 1;
+            color: rgb(29 78 216 / var(--tw-text-opacity))
+        }
+
+        .text-gray-500 {
+            --tw-text-opacity: 1;
+            color: rgb(107 114 128 / var(--tw-text-opacity))
+        }
+
+        .text-gray-700 {
+            --tw-text-opacity: 1;
+            color: rgb(55 65 81 / var(--tw-text-opacity))
+        }
+
+        .text-gray-900 {
+            --tw-text-opacity: 1;
+            color: rgb(17 24 39 / var(--tw-text-opacity))
+        }
+
+        .text-red-500 {
+            --tw-text-opacity: 1;
+            color: rgb(239 68 68 / var(--tw-text-opacity))
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity))
+        }
+
+        .underline {
+            -webkit-text-decoration-line: underline;
+            text-decoration-line: underline
+        }
+
+        .shadow-lg {
+            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .hover\:scale-125:hover {
+            --tw-scale-x: 1.25;
+            --tw-scale-y: 1.25;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:bg-blue-200:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(191 219 254 / var(--tw-bg-opacity))
+        }
+
+        .hover\:bg-blue-500:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(59 130 246 / var(--tw-bg-opacity))
+        }
+
+        .hover\:bg-blue-800:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(30 64 175 / var(--tw-bg-opacity))
+        }
+
+        .hover\:bg-indigo-400:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(129 140 248 / var(--tw-bg-opacity))
+        }
+
+        .hover\:text-white:hover {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity))
+        }
+
+        .focus\:border-blue-500:focus {
+            --tw-border-opacity: 1;
+            border-color: rgb(59 130 246 / var(--tw-border-opacity))
+        }
+
+        .focus\:outline-none:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px
+        }
+
+        .focus\:ring-4:focus {
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+        }
+
+        .focus\:ring-blue-300:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity))
+        }
+
+        .focus\:ring-blue-500:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity))
+        }
+
+        @media (min-width: 640px) {
+            .sm\:mx-auto {
+                margin-left: auto;
+                margin-right: auto
+            }
+
+            .sm\:mt-0 {
+                margin-top: 0px
+            }
+
+            .sm\:mt-5 {
+                margin-top: 1.25rem
+            }
+
+            .sm\:mt-8 {
+                margin-top: 2rem
+            }
+
+            .sm\:block {
+                display: block
+            }
+
+            .sm\:flex {
+                display: flex
+            }
+
+            .sm\:max-w-xl {
+                max-width: 36rem
+            }
+
+            .sm\:justify-center {
+                justify-content: center
+            }
+
+            .sm\:px-6 {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem
+            }
+
+            .sm\:text-center {
+                text-align: center
+            }
+
+            .sm\:text-5xl {
+                font-size: 3rem;
+                line-height: 1
+            }
+
+            .sm\:text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem
+            }
+        }
+
+        @media (min-width: 768px) {
+            .md\:m-4 {
+                margin: 1rem
+            }
+
+            .md\:ml-6 {
+                margin-left: 1.5rem
+            }
+
+            .md\:mr-0 {
+                margin-right: 0px
+            }
+
+            .md\:mt-0 {
+                margin-top: 0px
+            }
+
+            .md\:mt-20 {
+                margin-top: 5rem
+            }
+
+            .md\:mt-5 {
+                margin-top: 1.25rem
+            }
+
+            .md\:mt-6 {
+                margin-top: 1.5rem
+            }
+
+            .md\:flex {
+                display: flex
+            }
+
+            .md\:hidden {
+                display: none
+            }
+
+            .md\:h-screen {
+                height: 100vh
+            }
+
+            .md\:w-3\/6 {
+                width: 50%
+            }
+
+            .md\:w-48 {
+                width: 12rem
+            }
+
+            .md\:w-96 {
+                width: 24rem
+            }
+
+            .md\:w-auto {
+                width: auto
+            }
+
+            .md\:flex-row {
+                flex-direction: row
+            }
+
+            .md\:items-end {
+                align-items: flex-end
+            }
+
+            .md\:items-stretch {
+                align-items: stretch
+            }
+
+            .md\:justify-start {
+                justify-content: flex-start
+            }
+
+            .md\:justify-between {
+                justify-content: space-between
+            }
+
+            .md\:space-x-8> :not([hidden])~ :not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(2rem * var(--tw-space-x-reverse));
+                margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)))
+            }
+
+            .md\:px-0 {
+                padding-left: 0px;
+                padding-right: 0px
+            }
+
+            .md\:px-10 {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem
+            }
+
+            .md\:px-2 {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem
+            }
+
+            .md\:px-8 {
+                padding-left: 2rem;
+                padding-right: 2rem
+            }
+
+            .md\:py-4 {
+                padding-top: 1rem;
+                padding-bottom: 1rem
+            }
+
+            .md\:pr-8 {
+                padding-right: 2rem
+            }
+
+            .md\:text-right {
+                text-align: right
+            }
+
+            .md\:text-6xl {
+                font-size: 3.75rem;
+                line-height: 1
+            }
+
+            .md\:text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem
+            }
+
+            .md\:text-xl {
+                font-size: 1.25rem;
+                line-height: 1.75rem
+            }
+
+            .md\:font-medium {
+                font-weight: 500
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:mx-0 {
+                margin-left: 0px;
+                margin-right: 0px
+            }
+
+            .lg\:inline {
+                display: inline
+            }
+
+            .lg\:justify-start {
+                justify-content: flex-start
+            }
+
+            .lg\:px-8 {
+                padding-left: 2rem;
+                padding-right: 2rem
+            }
+
+            .lg\:text-left {
+                text-align: left
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .dark\:border-gray-600 {
+                --tw-border-opacity: 1;
+                border-color: rgb(75 85 99 / var(--tw-border-opacity))
+            }
+
+            .dark\:border-gray-700 {
+                --tw-border-opacity: 1;
+                border-color: rgb(55 65 81 / var(--tw-border-opacity))
+            }
+
+            .dark\:bg-blue-600 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(37 99 235 / var(--tw-bg-opacity))
+            }
+
+            .dark\:bg-gray-700 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+            }
+
+            .dark\:bg-gray-800 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(31 41 55 / var(--tw-bg-opacity))
+            }
+
+            .dark\:text-gray-400 {
+                --tw-text-opacity: 1;
+                color: rgb(156 163 175 / var(--tw-text-opacity))
+            }
+
+            .dark\:text-white {
+                --tw-text-opacity: 1;
+                color: rgb(255 255 255 / var(--tw-text-opacity))
+            }
+
+            .dark\:placeholder-gray-400::placeholder {
+                --tw-placeholder-opacity: 1;
+                color: rgb(156 163 175 / var(--tw-placeholder-opacity))
+            }
+
+            .dark\:hover\:bg-blue-700:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(29 78 216 / var(--tw-bg-opacity))
+            }
+
+            .dark\:focus\:border-blue-500:focus {
+                --tw-border-opacity: 1;
+                border-color: rgb(59 130 246 / var(--tw-border-opacity))
+            }
+
+            .dark\:focus\:ring-blue-500:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity))
+            }
+
+            .dark\:focus\:ring-blue-800:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity))
+            }
+        }
+    </style>
+    <style type="text/css">
+        .styles_typicalWrapper__1_Uvh {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .styles_typicalWrapper__1_Uvh::after {
+            content: attr(data-text) "|";
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            height: 80%;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        .moving-content {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 9999;
+        }
+
+        .moving-text {
+            font-size: large;
+            display: inline-block;
+            animation: moveRight 20s linear infinite;
+            color: #008000;
+        }
+
+        @keyframes moveRight {
+            0% {
+                transform: translateX(30%);
+            }
+
+            100% {
+                transform: translateX(-30%);
+            }
+        }
+    </style>
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div>
+            <nav class="bg-white border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0">
+                <div class="flex justify-between items-center py-2 md:py-4 md:px-2 pl-2 mx-auto">
+                    <div class="flex items-center cursor-pointer">
+                        <a href="/" class="text-xl font-medium text-decoration-none whitespace-nowrap text-black">&lt;
+                            Kotresh TV &gt;</a>
+                    </div>
+                    <div class="hidden justify-between items-center w-full md:flex md:w-auto ">
+                        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
+                            <li class="cursor-pointer"><a href="#home"
+                                    class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">Home</a>
+                            </li>
+                            <li class="cursor-pointer"><a href="#about"
+                                    class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">About</a>
+                            </li>
+                            <li class="cursor-pointer"><a href="#services"
+                                    class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">Services</a>
+                            </li>
+                            <li class="cursor-pointer"><a href="#projects"
+                                    class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">Projects</a>
+                            </li>
+                            <li class="cursor-pointer"><a href="#contact"
+                                    class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">Contact</a>
+                            </li>
+                        </ul>
+                        <div><img
+                                src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
+                                class="w-6 ml-6 cursor-pointer hover:scale-1.50 block" alt=""></div>
+                    </div>
+                    <div class="flex md:hidden items-center">
+                        <div><img
+                                src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
+                                class="w-6 mr-4 cursor-pointer hover:scale-1.50 block" alt=""></div>
+                        <div class="hamburger-react" role="button" tabindex="0"
+                            style="cursor: pointer; height: 48px; position: relative; transition: all 0.8s cubic-bezier(0, 0, 0, 1) 0s; user-select: none; width: 48px; outline: none; transform: none;">
+                            <div
+                                style="background: rgb(0, 0, 0); height: 2px; left: 13px; position: absolute; width: 22px; top: 15px; transition: all 0.8s cubic-bezier(0, 0, 0, 1) 0s; transform: none;">
+                            </div>
+                            <div
+                                style="background: rgb(0, 0, 0); height: 2px; left: 13px; position: absolute; width: 22px; top: 23px; transition: all 0.8s cubic-bezier(0, 0, 0, 1) 0s; transform: none;">
+                            </div>
+                            <div
+                                style="background: rgb(0, 0, 0); height: 2px; left: 13px; position: absolute; width: 22px; top: 31px; transition: all 0.8s cubic-bezier(0, 0, 0, 1) 0s; transform: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div style="color: red;padding-left: 50%;" class="moving-content">Alert!
+                <div class="moving-background">
+                    <span class="moving-text">--::❤❤ I am passionate about new opportunities and eager to join a dynamic team. With a strong background in Software Development Team,
+                                             I thrive in collaborative environments and am committed to delivering excellence. 
+                                             Ready to embrace challenges and contribute from day one, I look forward to driving success together. ❤❤::--</span>
+                </div>
+            </div>
+            <div id="home" style="background-image: url(&quot;/images/bg.png&quot;); background-size: cover;">
+                <main
+                    class="mx-auto max-w-7xl px-4 sm:px-6 md:mt-0 lg:px-8 flex flex-col md:flex-row items-center justify-center md:justify-between h-screen"
+                    id="/">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"><span
+                                class="block text-black">Hi, &ensp;I'm Kotresh</span><span
+                                class="block text-blue-500 z-0 lg:inline">
+                                <p class="styles_typicalWrapper__1_Uvh" data-text="developer"></p>
+                                <script>
+                                    const wrapper = document.querySelector('.styles_typicalWrapper__1_Uvh');
+                                    const contents = ['Back-End Developer.', 'Product Developer.', 'GenAI Expert.'];
+                                    let index = 0;
+                                    let isErasing = false;
+
+                                    function animateText() {
+                                        const currentContent = contents[index];
+                                        let currentText = wrapper.getAttribute('data-text');
+                                        if (isErasing) {
+                                            currentText = currentText.slice(0, -1);
+                                        } else {
+                                            currentText = currentContent.slice(0, currentText.length + 1);
+                                        }
+                                        wrapper.setAttribute('data-text', currentText);
+
+                                        if (currentText === currentContent && !isErasing) {
+                                            isErasing = true;
+                                            setTimeout(animateText, 1000);
+                                        } else if (currentText === '' && isErasing) {
+                                            isErasing = false;
+                                            index = (index + 1) % contents.length;
+                                            setTimeout(animateText, 100);
+                                        } else {
+                                            setTimeout(animateText, 100);
+                                        }
+                                    }
+
+                                    animateText(); 
+                                </script>
+                            </span></h1>
+                        <p
+                            class="mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Currently working at HashedIn By Deloitte</p>
+                        <div class="flex md:justify-start "><a
+                                href="https://stackoverflow.com/users/11788531/aakash-sharma"
+                                class="mr-5 cursor-pointer mt-8 hover:scale-125"><img alt=""
+                                    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/40/000000/external-stack-overflow-is-a-question-and-answer-site-for-professional-logo-color-tal-revivo.png"></a><a
+                                href="https://www.instagram.com/aakashsh1999/"
+                                class="mr-5 cursor-pointer mt-8 hover:scale-125"><img alt=""
+                                    src="https://img.icons8.com/doodle/40/000000/instagram-new--v2.png"></a><a
+                                href="https://github.com/aakashsh1999"
+                                class="mr-5 cursor-pointer mt-8 hover:scale-125"><img alt=""
+                                    src="https://img.icons8.com/doodle/40/000000/github--v1.png"></a><a
+                                href="https://www.linkedin.com/in/kotresh-tv-282ba527b"
+                                class="mr-5 cursor-pointer mt-8 hover:scale-125"><img alt=""
+                                    src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png"></a></div>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="mt-3 sm:mt-0 cursor-pointer w-1/2">
+                                <a id="resumeButton"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">Resume</a>
+                            </div>
+                            <div id="resumeModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <embed src="/cv/Kotresh_CV.pdf" width="100%" height="100%" type='application/pdf'
+                                        style="min-height: 400px;">
+                                </div>
+                            </div>
+
+                            <script>
+                                var modal = document.getElementById("resumeModal");
+                                var btn = document.getElementById("resumeButton");
+                                var span = document.getElementsByClassName("close")[0];
+                                btn.onclick = function () {
+                                    modal.style.display = "block";
+                                    document.body.style.overflow = "hidden";
+                                }
+                                span.onclick = function () {
+                                    modal.style.display = "none";
+                                    document.body.style.overflow = "";
+                                }
+                                window.onclick = function (event) {
+                                    if (event.target == modal) {
+                                        modal.style.display = "none";
+                                        document.body.style.overflow = "";
+                                    }
+                                }
+                                // btn.onclick = function() {
+                                //     modal.style.display = "block";
+                                //     document.body.style.overflow = "hidden";
+                                // }
+                                // span.onclick = function() {
+                                //     modal.style.display = "none";
+                                //     document.body.style.overflow = "";
+                                // }
+                                // window.onclick = function(event) {
+                                //     if (event.target == modal) {
+                                //     modal.style.display = "none";
+                                //     document.body.style.overflow = "";
+                                //     }
+                                // }
+                            </script>
+                        </div>
+                    </div><img src="/images/image.png" alt="" class="md:w-3/6 hidden sm:block"
+                        style="opacity: 1; transform: none;">
+                </main>
+            </div>
+            <div id="about" class="bg-white">
+                <div id="section" class="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 md:mt-0 pt-24 pb-12">
+                    <br>
+                    <h2 class="text-5xl font-bold px-4 md:px-0 text-center">About Me</h2>
+                    <div>
+                        <div>
+                            <h4 class="mt-12 text-3xl font-semibold text-blue-500">A bit about me</h4>
+                            <p class="mt-4 text-xl text-justify text-gray-500">I am passionate about exploring new opportunities and eager to bring my skills and energy to a dynamic and innovative team. 
+                                With a strong background in Back-End Development, I am ready to embrace new challenges and contribute to the success of my next role. 
+                                My enthusiasm for learning and growing professionally drives me to stay updated with the latest trends and technologies, ensuring I can provide fresh and impactful insights.
+                                <br><br>
+                                I thrive in environments that foster collaboration, creativity, and continuous improvement. Whether it's taking on complex projects, developing innovative solutions, 
+                                or working with diverse teams, I am committed to delivering excellence and achieving outstanding results. My proactive and adaptable nature allows me to quickly acclimate to new settings and make meaningful contributions from day one.
+                                <br><br>
+                                I am excited about the prospect of joining an organization that values passion, dedication, and a forward-thinking approach. 
+                                I look forward to the opportunity to leverage my expertise and work alongside talented professionals to achieve shared goals and drive organizational success.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="mt-12 text-3xl font-semibold text-blue-500">Technologies and Tools</h4>
+                            <p class="mt-4 text-xl text-justify text-gray-500">Utilizing advanced technologies and robust open-source frameworks, I specialize in backend development with a focus on Python. 
+                                My expertise encompasses a wide range of tools and technologies designed to build scalable, secure, and high-performance applications. I leverage Django, Flask, and 
+                                FastAPI to create efficient and maintainable codebases. Additionally, my experience with RESTful API development ensures seamless and effective communication between client and server. 
+                                <br><br>
+                                I am well-versed in implementing microservices architecture, facilitating scalable and modular application design. This approach ensures that different services can be developed, deployed, and 
+                                scaled independently, enhancing overall system robustness and flexibility.
+                                <br><br>
+                                Moreover, my proficiency with CI/CD pipelines, cloud platforms like AWS, and version control systems such as Git enables me to deliver reliable and maintainable solutions tailored to meet diverse business needs.
+
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap mt-8 flex flex-wrap justify-between ">
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/230px-Python-logo-notext.svg.png"
+                                    class="w-12">
+                                <h4 class="text-md ml-4">Python</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" class="w-12">
+                                <h4 class="text-md ml-4">Java</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://logowik.com/content/uploads/images/911_c_logo.jpg" class="w-12">
+                                <h4 class="text-md ml-4">C++</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg" class="w-12">
+                                <h4 class="text-md ml-4">C Language</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="w-12">
+                                <h4 class="text-md ml-4">Postman</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://www.svgrepo.com/show/303460/redis-logo.svg" class="w-12">
+                                <h4 class="text-md ml-4">Redis</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/89/Half-Life_lambda_logo.svg"
+                                    class="w-12">
+                                <h4 class="text-md ml-4">Lamda</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" class="w-12">
+                                <h4 class="text-md ml-4">MySQl</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg"
+                                    class="w-12">
+                                <h4 class="text-md ml-4">Mongo DB</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="data:image/png;base64,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"
+                                    class="w-12">
+                                <h4 class="text-md ml-4">GCP</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://partner.zoom.us/wp-content/uploads/2022/12/2022_Zoom-AWS_Lockup_RGB-1-e1672857797889-1024x760.png"
+                                    class="w-12">
+                                <h4 class="text-md ml-4">AWS</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg"
+                                    class="w-12">
+                                <h4 class="text-md ml-4">Git</h4>
+                            </div>
+                            <div class="py-2 px-4 bg-gray-50 md:m-4 mx-2 mt-6 rounded-lg flex items-center hover:scale-125 cursor-pointer md:w-48 w-40"
+                                style="opacity: 1; transform: translateY(80px) translateZ(0px);"><img alt=""
+                                    src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" class="w-12">
+                                <h4 class="text-md ml-4">Jira</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="pb-20 bg-fixed bg-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 px-4 pt-20" id="services">
+                    <br>
+                    <br>
+                    <h2 id="services" class="text-5xl font-bold px-4 md:px-0 text-center">Services</h2>
+                    <div>
+                        <h4 class="mt-16 text-3xl font-semibold text-blue-500">What I Provide</h4>
+                        <div class="mt-8 flex md:flex-row justify-between flex-col md:items-stretch items-center ">
+                            <div class="md:w-96 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
+                                style="opacity: 1; transform: none;"><img
+                                    src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png"
+                                    alt="">
+                                <h4 class="text-xl font-bold mt-4">Web Application Development</h4>
+                                <p class="text-lg mt-2 text-justify">Web design encompasses many different skills and
+                                    disciplines in the production and maintenance of websites from Backend. The different areas of
+                                    web designing from backend include some very usefull frameworks like Django, FastAPI also with some synthetic models like Pydantic, Pandas, OpenCV, etc. Along with it,
+                                    giving extreme deliverables from deployment side with AWS, GCP and Azure will gives
+                                    standardised code and proprietary software user experience design with working flow.
+                                </p>
+                            </div>
+                            <div class="md:w-96 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
+                                style="opacity: 1; transform: none"><img
+                                    src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-app-development-responsive-web-design-justicon-lineal-color-justicon.png"
+                                    alt="">
+                                <h4 class="text-xl font-bold mt-4">Mobile Application Development</h4>
+                                <p class="text-lg mt-2 text-justify">We provide a range of mobile application
+                                    development services
+                                    including custom mobile development on Android platforms, building
+                                    cross-platform apps, designing user experience and integrating
+                                    novel mobile interfaces such as chat and voice</p>
+                            </div>
+                            <div class="md:w-96 p-4 bg-white rounded-lg flex items-center flex-col mt-8"
+                                style="opacity:10; transform: none;"><img
+                                    src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+                                    alt="">
+                                <h4 class="text-xl font-bold mt-4">Backend Development</h4>
+                                <p class="text-lg mt-2 text-justify">Graphic design is a craft where professionals
+                                    create visual
+                                    content to communicate messages. By applying visual hierarchy and
+                                    page layout techniques, designers use typography and pictures to
+                                    meet users' specific needs and focus on the logic of displaying
+                                    elements in interactive designs, to optimize the user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projects" class="bg-white text-black">
+                <div class="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4  pt-24 pb-12">
+                    <br>
+                    <h2 id="projects" class="text-5xl font-bold px-4 md:px-0 text-center">Projects</h2>
+                    <h4 class="mt-16 text-3xl font-semibold text-blue-600">What I Built</h4>
+                    <div class="mt-8 flex justify-between items-stretch flex-wrap">
+                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+                            style="opacity: 1;"><a href="redirected.html?project=1"><img class="rounded-t-lg w-full"
+                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    alt=""></a>
+                            <div class="p-5"><a href="redirected.html?project=1">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                </p><a href="redirected.html?project=1"
+                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                                    Read more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+                            style="opacity: 1;"><a href="redirected.html?project=2"><img class="rounded-t-lg w-full"
+                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    alt=""></a>
+                            <div class="p-5"><a href="redirected.html?project=2">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                </p><a href="redirected.html?project=2"
+                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
+                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+                            style="opacity: 1;"><a href="redirected.html?project=3"><img class="rounded-t-lg w-full"
+                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    alt=""></a>
+                            <div class="p-5"><a href="redirected.html?project=3">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                </p><a href="redirected.html?project=3"
+                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
+                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+                            style="opacity: 1;"><a href="redirected.html?project=4"><img class="rounded-t-lg w-full"
+                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    alt=""></a>
+                            <div class="p-5"><a href="redirected.html?project=4">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                </p><a href="redirected.html?project=4"
+                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
+                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
+                            style="opacity: 1;"><a href="redirected.html?project=5"><img class="rounded-t-lg w-full"
+                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    alt=""></a>
+                            <div class="p-5"><a href="redirected.html?project=5">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                </p><a href="redirected.html?project=5"
+                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
+                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div><a href="redirected.html?project=all"
+                        class=" w-32 flex items-center py-4 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mx-auto mt-4">Show
+                        More<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></a>
+                </div>
+            </div>
+            <div id="contact" class="bg-gray-100 pt-24 md:h-screen">
+                <div class="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 ">
+                    <br>
+                    <h2 id="contact" class="text-5xl font-bold px-4 md:px-0 text-center z-0">Contact</h2>
+                    <div>
+                        <h4 class="mt-12 text-3xl font-semibold text-blue-500">Connect with me</h4>
+                        <p class="text-gray-500 text-xl">If you want to know more about me/related to my work, or if you
+                            would
+                            just<br>like to say hello, send me a message. I'd love to hear from you.</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row-reverse justify-between items-center pb-24">
+                        <div class="w-full md:pl-8 md:pr-0">
+                            <form>
+                                <div class="my-6"><label for="name"
+                                        class="block mb-2 text-lg font-medium text-gray-900">Name</label><input
+                                        type="email" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Enter your name" required=""></div>
+                                <div class="mb-4"><label for="email"
+                                        class="block mb-2 text-lg font-medium text-gray-900">Email</label><input
+                                        type="email" id="email"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Enter your email" required=""></div>
+                                <div class="mb-4"><label for="message"
+                                        class="block mb-2 text-lg font-medium text-gray-900">Message</label><textarea
+                                        id="message"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Enter your message" required=""></textarea></div>
+                                <div class="flex justify-between ">
+                                    <div class="underline"><a href="mailto:kotreshtvheremath12@gmail.com">Send me email
+                                            directly</a></div><button
+                                        class="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400"><a
+                                            href="mailto:kotreshtvheremath12@gmail.com">Submit</a></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="w-full flex flex-col md:items-start  mt-12 md:mt-6">
+                            <h1 class="text-3xl font-bold">Email</h1><a href="hello"
+                                class="mb-12 mt-4 font-semibold text-blue-700 block lowercase">kotreshtvheremath12@gmail.com</a>
+                            <h1 class="text-3xl  font-bold">Address</h1><a href="hello"
+                                class="mt-4  mb-12 md:text-right font-semibold text-blue-700 block capital">Bangalore,
+                                Karnataka, India</a>
+                            <h1 class="text-3xl  font-bold">Social</h1>
+                            <ul class="flex"><a href="https://stackoverflow.com/users/11788531/aakash-sharma"
+                                    class="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"><img
+                                        alt=""
+                                        src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/40/000000/external-stack-overflow-is-a-question-and-answer-site-for-professional-logo-color-tal-revivo.png"></a><a
+                                    href="https://www.instagram.com/aakashsh1999/"
+                                    class="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"><img
+                                        alt=""
+                                        src="https://img.icons8.com/doodle/40/000000/instagram-new--v2.png"></a><a
+                                    href="https://github.com/aakashsh1999"
+                                    class="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"><img
+                                        alt="" src="https://img.icons8.com/doodle/40/000000/github--v1.png"></a><a
+                                    href="https://www.linkedin.com/in/kotresh-tv-282ba527b"
+                                    class="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"><img
+                                        alt="" src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png"></a></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full bg-white text-black text-lg py-3 flex justify-center md:mt-20">Made with<div
+                        class="text-red-500 px-2 text-2xl">❤</div>By Kotresh TV</div>
+            </div>
+        </div>
+</body>
+
+</html>
