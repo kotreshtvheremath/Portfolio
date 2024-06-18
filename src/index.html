@@ -906,6 +906,11 @@
             --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity))
         }
 
+        .width-img{
+            height: 2.65rem;
+            width: 3rem;
+        }
+
         @media (min-width: 640px) {
             .sm\:mx-auto {
                 margin-left: auto;
@@ -1254,18 +1259,104 @@
         .moving-text {
             font-size: large;
             display: inline-block;
-            animation: moveRight 20s linear infinite;
+            animation: moveRight 30s linear infinite;
             color: #008000;
+            white-space: nowrap;
+            padding-right: 100%;
+            padding-left: 100%;
         }
 
         @keyframes moveRight {
             0% {
-                transform: translateX(30%);
+                transform: translateX(0%);
             }
 
             100% {
-                transform: translateX(-30%);
+                transform: translateX(-100%);
             }
+        }
+    </style>
+    <style>
+      .card {
+            width: calc(4in - 2 * 20px); /* Adjust for padding */
+            height: calc(5in - 2 * 20px); /* Adjust for padding */
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+
+        .card .card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card .front,
+        .card .back {
+            border: #008000;
+            box-sizing: content-box;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card .front {
+            background-color: #e7f2f9; /* Light blue background color */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        .card .back {
+            transform: rotateY(180deg);
+        }
+    </style>
+     <style>
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -1273,18 +1364,18 @@
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
         <div>
-            <nav class="bg-white border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0">
+            <nav class="bg-white border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0 left-0">
                 <div class="flex justify-between items-center py-2 md:py-4 md:px-2 pl-2 mx-auto">
                     <div class="flex items-center cursor-pointer">
                         <a href="/" class="text-xl font-medium text-decoration-none whitespace-nowrap text-black">&lt;
                             Kotresh TV &gt;</a>
                     </div>
-                    <div class="hidden justify-between items-center w-full md:flex md:w-auto ">
+                    <div style="font-weight: bold; font-size: large;" class="hidden justify-between items-center w-full md:flex md:w-auto ">
                         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
-                            <li class="cursor-pointer"><a href="#home"
+                            <li class="cursor-pointer"><a href="#home" 
                                     class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">Home</a>
                             </li>
-                            <li class="cursor-pointer"><a href="#about"
+                            <li class="cursor-pointer"><a href="#about" 
                                     class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">About</a>
                             </li>
                             <li class="cursor-pointer"><a href="#services"
@@ -1297,9 +1388,13 @@
                                     class="block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md">Contact</a>
                             </li>
                         </ul>
-                        <div><img
+                        <div>
+                            <button id="theme-toggle" class="w-6 ml-6 cursor-pointer">
+                            <img
                                 src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
-                                class="w-6 ml-6 cursor-pointer hover:scale-1.50 block" alt=""></div>
+                                class="w-6 ml-6 cursor-pointer hover:scale-1.50 block" alt="">
+                            </button>
+                            </div>
                     </div>
                     <div class="flex md:hidden items-center">
                         <div><img
@@ -1320,21 +1415,21 @@
                     </div>
                 </div>
             </nav>
-            <div style="color: red;padding-left: 50%;" class="moving-content">Alert!
+            <div style="color: red; padding-left: 50%; font-style: italic; font-weight: bold; background-color:#BCC6CC;" class="moving-content">Alert!
                 <div class="moving-background">
-                    <span class="moving-text">--::❤❤ I am passionate about new opportunities and eager to join a dynamic team. With a strong background in Software Development Team,
+                    <span  style="font-style: italic; font-weight: normal; background-color: #BCC6CC;" class="moving-text">- : I am passionate about new opportunities and eager to join a dynamic team. With a strong background in Software Development Team,
                                              I thrive in collaborative environments and am committed to delivering excellence. 
-                                             Ready to embrace challenges and contribute from day one, I look forward to driving success together. ❤❤::--</span>
+                                             Ready to embrace challenges and contribute from day one, I look forward to driving success together. : -</span>
                 </div>
             </div>
             <div id="home" style="background-image: url(&quot;/images/bg.png&quot;); background-size: cover;">
                 <main
-                    class="mx-auto max-w-7xl px-4 sm:px-6 md:mt-0 lg:px-8 flex flex-col md:flex-row items-center justify-center md:justify-between h-screen"
+                    class="mx-auto max-w-7xl px-0 sm:px-6 md:mt-0 lg:px-8 flex flex-col md:flex-row items-center justify-center md:justify-between h-screen"
                     id="/">
                     <div class="sm:text-center lg:text-left">
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"><span
                                 class="block text-black">Hi, &ensp;I'm Kotresh</span><span
-                                class="block text-blue-500 z-0 lg:inline">
+                                class="block text-white z-0 lg:inline">
                                 <p class="styles_typicalWrapper__1_Uvh" data-text="developer"></p>
                                 <script>
                                     const wrapper = document.querySelector('.styles_typicalWrapper__1_Uvh');
@@ -1382,65 +1477,61 @@
                                     src="https://img.icons8.com/doodle/40/000000/github--v1.png"></a><a
                                 href="https://www.linkedin.com/in/kotresh-tv-282ba527b"
                                 class="mr-5 cursor-pointer mt-8 hover:scale-125"><img alt=""
-                                    src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png"></a></div>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div class="mt-3 sm:mt-0 cursor-pointer w-1/2">
-                                <a id="resumeButton"
-                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">Resume</a>
-                            </div>
-                            <div id="resumeModal" class="modal">
-                                <div class="modal-content">
-                                    <span class="close">&times;</span>
-                                    <embed src="/cv/Kotresh_CV.pdf" width="100%" height="100%" type='application/pdf'
-                                        style="min-height: 400px;">
-                                </div>
-                            </div>
-
-                            <script>
-                                var modal = document.getElementById("resumeModal");
-                                var btn = document.getElementById("resumeButton");
-                                var span = document.getElementsByClassName("close")[0];
-                                btn.onclick = function () {
-                                    modal.style.display = "block";
-                                    document.body.style.overflow = "hidden";
-                                }
-                                span.onclick = function () {
-                                    modal.style.display = "none";
-                                    document.body.style.overflow = "";
-                                }
-                                window.onclick = function (event) {
-                                    if (event.target == modal) {
-                                        modal.style.display = "none";
-                                        document.body.style.overflow = "";
-                                    }
-                                }
-                                // btn.onclick = function() {
-                                //     modal.style.display = "block";
-                                //     document.body.style.overflow = "hidden";
-                                // }
-                                // span.onclick = function() {
-                                //     modal.style.display = "none";
-                                //     document.body.style.overflow = "";
-                                // }
-                                // window.onclick = function(event) {
-                                //     if (event.target == modal) {
-                                //     modal.style.display = "none";
-                                //     document.body.style.overflow = "";
-                                //     }
-                                // }
-                            </script>
-                        </div>
-                    </div><img src="/images/image.png" alt="" class="md:w-3/6 hidden sm:block"
+                                    src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png"></a><a
+                                href="/images/pic.jpg"
+                                class="mr-5 cursor-pointer mt-8 hover:scale-125"><img alt="" class=" width-img"
+                                    src="/images/camera.svg"></a></div>
+                        
+                    </div>
+                    
+                    <img src="/images/image.png" alt="" class="md:w-3/6 hidden sm:block"
                         style="opacity: 1; transform: none;">
+                    <!-- <div class="justify-center font-bold text-center">
+                        <h3 style="">This is some quotes</h3>
+                    </div> -->
                 </main>
+
+                <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                    <div class="mt-3 sm:mt-0 cursor-pointer w-full flex justify-center">
+                        <a id="resumeButton" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
+                            Resume/CV</a>
+                    </div>
+                    <div id="resumeModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <embed src="/cv/Kotresh_CV.pdf" width="100%" height="100%" type='application/pdf'
+                                style="min-height: 400px;">
+                        </div>
+                    </div>
+
+                    <script>
+                        var modal = document.getElementById("resumeModal");
+                        var btn = document.getElementById("resumeButton");
+                        var span = document.getElementsByClassName("close")[0];
+                        btn.onclick = function () {
+                            modal.style.display = "block";
+                            document.body.style.overflow = "hidden";
+                        }
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                            document.body.style.overflow = "";
+                        }
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                                document.body.style.overflow = "";
+                            }
+                        }
+                    </script>
+                </div>
             </div>
             <div id="about" class="bg-white">
                 <div id="section" class="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 md:mt-0 pt-24 pb-12">
-                    <br>
+                    <br><br>
                     <h2 class="text-5xl font-bold px-4 md:px-0 text-center">About Me</h2>
                     <div>
                         <div>
-                            <h4 class="mt-12 text-3xl font-semibold text-blue-500">A bit about me</h4>
+                            <h4 class="mt-12 text-3xl font-semibold text-blue-500">A bit about me:</h4>
                             <p class="mt-4 text-xl text-justify text-gray-500">I am passionate about exploring new opportunities and eager to bring my skills and energy to a dynamic and innovative team. 
                                 With a strong background in Back-End Development, I am ready to embrace new challenges and contribute to the success of my next role. 
                                 My enthusiasm for learning and growing professionally drives me to stay updated with the latest trends and technologies, ensuring I can provide fresh and impactful insights.
@@ -1453,7 +1544,7 @@
                             </p>
                         </div>
                         <div>
-                            <h4 class="mt-12 text-3xl font-semibold text-blue-500">Technologies and Tools</h4>
+                            <h4 class="mt-12 text-3xl font-semibold text-blue-500">Technologies and Tools:</h4>
                             <p class="mt-4 text-xl text-justify text-gray-500">Utilizing advanced technologies and robust open-source frameworks, I specialize in backend development with a focus on Python. 
                                 My expertise encompasses a wide range of tools and technologies designed to build scalable, secure, and high-performance applications. I leverage Django, Flask, and 
                                 FastAPI to create efficient and maintainable codebases. Additionally, my experience with RESTful API development ensures seamless and effective communication between client and server. 
@@ -1543,10 +1634,9 @@
                 </div>
             </div>
             <br><br>
-            <div class="pb-20 bg-fixed bg-gray-100">
+            <!-- <div class="pb-20 bg-fixed bg-gray-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 px-4 pt-20" id="services">
-                    <br>
-                    <br>
+                    <br><br><br>
                     <h2 id="services" class="text-5xl font-bold px-4 md:px-0 text-center">Services</h2>
                     <div>
                         <h4 class="mt-16 text-3xl font-semibold text-blue-500">What I Provide</h4>
@@ -1589,23 +1679,86 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <div class="pb-20 bg-fixed bg-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 px-4 pt-20" id="services">
+                    <br><br><br>
+                    <h2 id="services" class="text-5xl font-bold px-4 md:px-0 text-center">Services</h2>
+                    <div>
+                        <h4 class="mt-16 text-3xl font-semibold text-blue-500">What can you expect:</h4>
+                        <div class="mt-8 grid md:grid-cols-3 gap-8"> 
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="front">
+                                        <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png" alt="">
+                                        <h4 class="text-xl font-bold mt-4">Web Application Development</h4>
+                                    </div>
+                                    <div class="back">
+                                        <h4 class="text-xl font-bold mt-4">Web Application Development</h4>
+                                        <p class="text-lg mt-2 text-justify">
+                                            Web design encompasses many different skills and disciplines in the production and maintenance of websites from Backend. 
+                                            The different areas of web designing from backend include some very useful frameworks like Django, FastAPI also with some synthetic models like Pydantic, Pandas, OpenCV, etc. 
+                                            Along with it, giving extreme deliverables from deployment side with AWS, GCP and Azure will gives standardised code and proprietary software user experience design with working flow.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="front">
+                                        <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png" alt="">
+                                        <h4 class="text-xl font-bold mt-4">Mobile Development</h4>
+                                    </div>
+                                    <div class="back">
+                                        <h4 class="text-xl font-bold mt-4">Mobile Development</h4>
+                                        <p class="text-lg mt-2 text-justify">
+                                            We provide a range of mobile application
+                                            development services
+                                            including custom mobile development on Android platforms, building
+                                            cross-platform apps, designing user experience and integrating
+                                            novel mobile interfaces such as chat and voice
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="front">
+                                        <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png" alt="">
+                                        <h4 class="text-xl font-bold mt-4">Back-End Development</h4>
+                                    </div>
+                                    <div class="back">
+                                        <h4 class="text-xl font-bold mt-4">Back-End Development</h4>
+                                        <p class="text-lg mt-2 text-justify">
+                                            Graphic design is a craft where professionals
+                                            create visual
+                                            content to communicate messages. By applying visual hierarchy and
+                                            page layout techniques, designers use typography and pictures to
+                                            meet users' specific needs and focus on the logic of displaying
+                                            elements in interactive designs, to optimize the user experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="projects" class="bg-white text-black">
+            <div id="projects" class="bg-white text-black" style="background-image: url(&quot;https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500&quot;); background-size: cover;">
                 <div class="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4  pt-24 pb-12">
-                    <br>
+                    <br><br>
                     <h2 id="projects" class="text-5xl font-bold px-4 md:px-0 text-center">Projects</h2>
-                    <h4 class="mt-16 text-3xl font-semibold text-blue-600">What I Built</h4>
+                    <h4 class="mt-16 text-3xl font-semibold text-blue-600">What I Built:</h4>
                     <div class="mt-8 flex justify-between items-stretch flex-wrap">
                         <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
                             style="opacity: 1;"><a href="redirected.html?project=1"><img class="rounded-t-lg w-full"
-                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    src="/images/covid-pne.png"
                                     alt=""></a>
                             <div class="p-5"><a href="redirected.html?project=1">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Noteworthy technology acquisitions 2021</h5>
+                                        Covid-19 and Pneumonia Detection Using Chest X-ray 2022</h5>
                                 </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
-                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">This is the model in which AI/ML algoritham has embedded, that can predict the covid-19 and Pneumonia using just chest x-ray report with 96% accuracy.
                                 </p><a href="redirected.html?project=1"
                                     class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">
                                     Read more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
@@ -1618,75 +1771,14 @@
                         </div>
                         <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
                             style="opacity: 1;"><a href="redirected.html?project=2"><img class="rounded-t-lg w-full"
-                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
+                                    src="/images/allocation.png"
                                     alt=""></a>
                             <div class="p-5"><a href="redirected.html?project=2">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Noteworthy technology acquisitions 2021</h5>
+                                        Resourse Allocation Manager 2024</h5>
                                 </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
-                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">This is about the allocating the people based on their skills/experience etc to a suitable projects within the organization level.
                                 </p><a href="redirected.html?project=2"
-                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
-                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd"></path>
-                                    </svg></a>
-                            </div>
-                        </div>
-                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
-                            style="opacity: 1;"><a href="redirected.html?project=3"><img class="rounded-t-lg w-full"
-                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
-                                    alt=""></a>
-                            <div class="p-5"><a href="redirected.html?project=3">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Noteworthy technology acquisitions 2021</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
-                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                </p><a href="redirected.html?project=3"
-                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
-                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd"></path>
-                                    </svg></a>
-                            </div>
-                        </div>
-                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
-                            style="opacity: 1;"><a href="redirected.html?project=4"><img class="rounded-t-lg w-full"
-                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
-                                    alt=""></a>
-                            <div class="p-5"><a href="redirected.html?project=4">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Noteworthy technology acquisitions 2021</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
-                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                </p><a href="redirected.html?project=4"
-                                    class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
-                                    more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd"></path>
-                                    </svg></a>
-                            </div>
-                        </div>
-                        <div class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
-                            style="opacity: 1;"><a href="redirected.html?project=5"><img class="rounded-t-lg w-full"
-                                    src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
-                                    alt=""></a>
-                            <div class="p-5"><a href="redirected.html?project=5">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Noteworthy technology acquisitions 2021</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
-                                    enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                </p><a href="redirected.html?project=5"
                                     class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300">Read
                                     more<svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1704,11 +1796,11 @@
                                 d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg></a>
-                </div>
+                    </div>
             </div>
-            <div id="contact" class="bg-gray-100 pt-24 md:h-screen">
+            <div id="contact" class="bg-gray-100 pt-24 md:h-screen" style="background-image: url(&quot;/images/bg.png&quot;); background-size: cover;">
                 <div class="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 ">
-                    <br>
+                    <br><br>
                     <h2 id="contact" class="text-5xl font-bold px-4 md:px-0 text-center z-0">Contact</h2>
                     <div>
                         <h4 class="mt-12 text-3xl font-semibold text-blue-500">Connect with me</h4>
@@ -1766,10 +1858,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full bg-white text-black text-lg py-3 flex justify-center md:mt-20">Made with<div
-                        class="text-red-500 px-2 text-2xl">❤</div>By Kotresh TV</div>
-            </div>
+                <div class="w-full bg-slate-700 text-white text-lg py-5 flex md:mt-20">
+                    <div class="w-[33.3%] text-center"> <h1 class="text-white text-xl">Copyright © 2024 Kotresh. All rights reserved.</h1></div>
+                    <div class=" w-[33.3%] text-center text-xl"> Made with <span class="text-red-500">❤</span>  By Kotresh TV</div>
+                    <div class="w-[33.3%] text-center text-xl" href="https://form/feedback-for-portfolio">
+                        Feedback
+                    </div>
+                    </div>   
+                </div>
         </div>
+        <script>
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("readMoreBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
 </body>
 
 </html>

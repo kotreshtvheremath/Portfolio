@@ -3,75 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>Work in Progress</title>
     <style>
-        body {
+        body, html {
+            height: 100%;
+            margin: 0;
             font-family: Arial, sans-serif;
-            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
-        #back-button {
-            font-size: x-large;
-            position: fixed;
-            top: 70px;
-            right: 100px;
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            z-index: 2;
+        }
+        .button {
+            margin-top: 20px;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const project = urlParams.get('project');
-
-            const projectDetails = {
-                1: {
-                    title: "Project 1",
-                    description: "Detailed description of Project 1."
-                },
-                2: {
-                    title: "Project 2",
-                    description: "Detailed description of Project 2."
-                    
-                },
-                3: {
-                    title: "Project 3",
-                    description: "Detailed description of Project 3."
-                },
-                4: {
-                    title: "Project 4",
-                    description: "Detailed description of Project 4."
-                },
-                5: {
-                    title: "Project 5",
-                    description: "Detailed description of Project 5."
-                },
-                "all": {
-                    title: "All Projects",
-                    description: "Detailed description of Projects."
-                }
-            };
-
-            const projectDetail = projectDetails[project];
-
-            if (projectDetail) {
-                document.getElementById("project-title").innerText = projectDetail.title;
-                document.getElementById("project-description").innerText = projectDetail.description;
-            } else {
-                document.getElementById("project-title").innerText = "Project not found";
-                document.getElementById("project-description").innerText = "";
-            }
-        });
-    </script>
 </head>
-<body>
-    <button id="back-button" onclick="goBack()">Back</button>
-    <h1 id="project-title"></h1>
-    <p id="project-description"></p>
-
+<body style="height: fit-content;">
+    <div class="container">
+        <h1>Work in Progress, Please wait for some more days.</h1>
+        <a class="button" id="button" onclick="goBack()">Go Back</a>
+        <h1 id="project-title"></h1>
+        <p id="project-description"></p>
+    </div>
     <script>
         function goBack() {
             window.history.back();
